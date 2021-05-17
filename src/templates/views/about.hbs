@@ -1,0 +1,20 @@
+<!-- hbs is an html file basically -->
+
+<!-- the name index.html means this will get served first by default-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About</title>
+        <link rel="icon" href="/img/icon.png">
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body>
+        <!-- this is .hbs syntax. you use the curly brace notation to access whatever object member was passed to render in src/app.js -->
+        <div class="main-content">
+            {{>header}}
+            <img class="portrait" src="{{photo}}">
+        </div>
+        
+        {{>footer}}
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!-- hbs is an html file basically -->
+
+<!-- the name index.html means this will get served first by default-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather</title>
+        <link rel="icon" href="/img/icon.png">
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body>
+        <div class="main-content">
+            {{>header}}
+            <p>Use this site to get your weather.</p>
+
+            <form>
+                <input placeholder='Location'>
+                <button>Search</button>
+            </form>
+
+            <p id="message-1"></p>
+            <p id="message-2"></p>
+
+        </div>
+        <!-- this is .hbs syntax. you use the curly brace notation to access whatever object member was passed to render in src/app.js -->
+        {{>footer}}
+        <script src="/js/app.js"></script>
+    </body>
+</html>
