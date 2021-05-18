@@ -11,6 +11,7 @@ const public_dir_path = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, './templates/views')
 const partialsPath = path.join(__dirname, './templates/partials')
 
+const port = process.env.PORT || 3000
 const app = express()
 
 // tell express which templating engine we installed by using app.set
@@ -126,6 +127,6 @@ app.get('*', (req, res) => {
 // starts up server and has it listen on a specific port
 // 3000 is a common development port. http is port 80
 // listen has a second optional argument, which is a callback function that runs when the server starts. it's async
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log('Server is up on port ' + port)
 })

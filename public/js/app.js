@@ -19,7 +19,7 @@ weatherForm.addEventListener('submit', (e) => {
     // Fetch is a browser based API. its not accessible in node
     // calling this kicks off an async io operation
     // -- youre passing a callback function to 'then'
-    fetch('http://localhost:3000/weather?address=' + location).then((response) => {
+    fetch('/weather?address=' + location).then((response) => {
         response.json().then((data) => {
             if(data.error) {
                 console.log(data.error)
